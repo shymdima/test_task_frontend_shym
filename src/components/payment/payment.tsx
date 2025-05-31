@@ -76,21 +76,21 @@ export const Payment = () => {
     setExpirationDateError(null);
     setCvcError(null);
 
-    let hasError = false;
+
 
     if (cardNumber.replace(/\s/g, '').length !== 16) {
       setCardNumberError(t('invalidCardNumber', { min: 16 }));
-      hasError = true;
+
     }
 
     if (!isExpirationValid(expirationDate)) {
       setExpirationDateError(t('invalidExpirationDate'));
-      hasError = true;
+
     }
 
     if (cvc.length !== 3) {
       setCvcError(t('invalidCvc', { digits: 3 }));
-      hasError = true;
+
     }
 
     setShowPopUp(true);
