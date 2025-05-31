@@ -1,12 +1,7 @@
 export default {
-  extends: [
-    'stylelint-config-standard-scss',
-    'stylelint-config-clean-order',
-  ],
+  extends: ['stylelint-config-standard-scss', 'stylelint-config-clean-order'],
 
-  plugins: [
-    'stylelint-scss'
-  ],
+  plugins: ['stylelint-scss'],
 
   customSyntax: 'postcss-scss',
 
@@ -17,31 +12,47 @@ export default {
     'property-no-vendor-prefix': null,
     'value-keyword-case': null,
 
-    'declaration-empty-line-before': ['always', {
-      except: ['first-nested'],
-      ignore: ['after-comment', 'after-declaration', 'inside-single-line-block']
-    }],
+    'declaration-empty-line-before': [
+      'always',
+      {
+        except: ['first-nested'],
+        ignore: [
+          'after-comment',
+          'after-declaration',
+          'inside-single-line-block',
+        ],
+      },
+    ],
 
     'function-url-quotes': null,
     'media-feature-range-notation': 'prefix',
     'number-max-precision': 2,
 
-    'rule-empty-line-before': ['always', {
-      ignore: ['after-comment', 'first-nested', 'inside-block']
-    }],
+    'rule-empty-line-before': [
+      'always',
+      {
+        ignore: ['after-comment', 'first-nested', 'inside-block'],
+      },
+    ],
 
     'selector-max-id': 0,
     'selector-max-universal': 1,
 
-    'unit-no-unknown': [true, {
-      ignoreUnits: ['fr'],
-    }],
+    'unit-no-unknown': [
+      true,
+      {
+        ignoreUnits: ['fr'],
+      },
+    ],
 
     'selector-class-pattern': null,
     'scss/dollar-variable-pattern': null,
 
-    'scss/at-rule-no-unknown': [true, {
-      ignoreAtRules: ['theme', 'plugin', 'apply', 'utility']
-    }],
+    'scss/at-rule-no-unknown': [
+      true,
+      {
+        ignoreAtRules: ['theme', 'plugin', 'apply', 'utility'],
+      },
+    ],
   },
 };

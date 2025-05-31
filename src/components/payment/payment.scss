@@ -1,158 +1,151 @@
 .payment {
-    &__button {
-        width: 100%;
-        height: 48px;
-        border: none;
-        padding: 0;
-        cursor: pointer;
+  &__button {
+    width: 100%;
+    height: 48px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 
-        &-apple-pay {
-          background-color: #000000;
-          background-image: url('/images/icons/apple-pay.svg');
-          background-repeat: no-repeat;
-          background-position: center;
-          border-radius: 3px;
-          &:hover {
-            background-color: #1a1a1a;
-          }
-    
-          &:active {
-            background-color: #333333;
-            transform: scale(0.98);
-          }
-        }
-        &-form-submit {
-          margin-block: 16px 8px;
-          background-color: #028837;
-          border-radius: 6px;
-          font-weight: 600;
-          font-size: 16px;
-          line-height: 24px;
-          text-align: center;
-          color: #FFFFFF;
-          font-family: 'Inter', sans-serif;
-          &:hover {
-            background-color: #026c2c;
-          }
-    
-          &:active {
-            background-color: #014a1e;
-            transform: scale(0.98);
-          }
-        }
-       
-    }
-    &__text-conditions {
-        padding: 12px 16px;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 16px;
-        letter-spacing: 0%;
-        color: #666C7B;
-        border: 1px solid #E4E6EC;
-        border-radius: 8px;
-        }
-    
-      &__divider {
-        margin: 24px 0;
+    &-apple-pay {
+      background-color: #000;
+      background-image: url('/images/icons/apple-pay.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 3px;
+      &:hover {
+        background-color: #1a1a1a;
       }
-    
-      &__text--with-dividers {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    
-        color: #666C7B;
-        font-size: 14px;
-        line-height: 24px;
-        white-space: nowrap;
-        margin-block: 24px 16px;
-    
-        &::before,
-        &::after {
-          content: '';
-          flex: 1;
-          height: 1px;
-          background-color: #ccc;
-        }
-    
-        &::before {
-          margin-right: 16px;
-        }
-    
-        &::after {
-          margin-left: 16px;
-        }
+
+      &:active {
+        background-color: #333;
+        transform: scale(0.98);
+      }
+    }
+    &-form-submit {
+      margin-block: 16px 8px;
+      background-color: #028837;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      color: #fff;
+      font-family: Inter, sans-serif;
+      &:hover {
+        background-color: #026c2c;
+      }
+
+      &:active {
+        background-color: #014a1e;
+        transform: scale(0.98);
+      }
+    }
+  }
+  &__text-conditions {
+    padding: 12px 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    color: #666c7b;
+    border: 1px solid #e4e6ec;
+    border-radius: 8px;
+  }
+
+  &__divider {
+    margin: 24px 0;
+  }
+
+  &__text--with-dividers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #666c7b;
+    font-size: 14px;
+    line-height: 24px;
+    white-space: nowrap;
+    margin-block: 24px 16px;
+
+    &::before,
+    &::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background-color: #ccc;
     }
 
-    &__form {
-    
-        &-label {
-          display: block;
-          color: #666C7B;
-          font-weight: 500;
-          font-size: 12px;
-          line-height: 16px;
-        }
-        &-wrapper {
-          display: flex;
-          gap: 8px;
-        }
-        &-column {
-          display: flex;
-          flex-direction: column;
-          flex: 1;
-        }
-      }
-      
-    
-      &__input {
-        height: 44px;
-        border-radius: 6px;
-        border: 1px solid #C7C9D1;
-        box-sizing: border-box;
-        padding: 10px 12px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        color: #666C7B;
-       
-        transition:
+    &::before {
+      margin-right: 16px;
+    }
+
+    &::after {
+      margin-left: 16px;
+    }
+  }
+
+  &__form {
+    &-label {
+      display: block;
+      color: #666c7b;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+    }
+    &-wrapper {
+      display: flex;
+      gap: 8px;
+    }
+    &-column {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+  }
+
+  &__input {
+    height: 44px;
+    border-radius: 6px;
+    border: 1px solid #c7c9d1;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #666c7b;
+
+    transition:
       border-color 0.3s ease,
       box-shadow 0.3s ease,
       transform 0.2s ease;
 
-        &:hover {
-          border-color: #999;
-          box-shadow: 0px 2px 6px -2px rgba(0, 0, 0, 0.1);
-        }
+    &:hover {
+      border-color: #999;
+      box-shadow:  2px 6px -2px rgb(0, 0, 0, 0.1);
+    }
 
+    &:focus {
+      outline: none;
+      box-shadow: 2px 4px -2px #0000001f;
+    }
 
+    &::placeholder {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: #666c7b;
+    }
 
-        &:focus {
-          box-shadow: 0px 2px 4px -2px #0000001F;
-          outline: none;
-        }
-
-        
-        &::placeholder {
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 24px;
-          color: #666C7B;
-        }
-
-        &--large {
-          width: 100%;
-          margin-bottom: 12px;
-        }
-        &--small {
-          flex-grow: 1;
-          width: 100%;
-        }
-        &--error {
-          border: 1px solid red;
-        }
-        
-      }
+    &--large {
+      width: 100%;
+      margin-bottom: 12px;
+    }
+    &--small {
+      flex-grow: 1;
+      width: 100%;
+    }
+    &--error {
+      border: 1px solid red;
+    }
+  }
 }

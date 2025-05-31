@@ -1,54 +1,9 @@
-# React + TypeScript + Vite
+The project is built with React and TypeScript, using SCSS for styling and following the BEM convention to keep class naming structured and maintainable. React Hooks manage component state, and the interface supports internationalization through react-i18next. Conditional class names are handled with the help of the classnames utility.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The main libraries used in the project include React and ReactDOM for rendering the interface, TypeScript for type safety, react-i18next for handling multiple languages, classnames for managing dynamic class logic, and sass for modular styles.
 
-Currently, two official plugins are available:
+The application represents a simplified payment page where users can choose between Apple Pay or entering their card details manually. The form captures card number, expiration date, and CVC, with real-time input formatting and client-side validation. When the user submits the form, a modal appears to indicate either success or validation errors. The interface also allows switching languages on the fly, ensuring a more accessible and flexible user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To run the project locally, you can clone the repository, install the dependencies with npm install, and start the development server using either npm run dev or npm start. Once running, the app is available at http://localhost:5173.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+For code quality, the project includes ESLint and Prettier. ESLint is configured to enforce clean and consistent code for both TypeScript and React, while Prettier handles formatting. You can run npm run lint to check for issues, npm run lint:fix to fix them automatically, and npm run format to format the codebase. All configuration is located in the .eslintrc and .prettierrc files.

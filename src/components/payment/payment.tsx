@@ -14,14 +14,16 @@ export const Payment = () => {
   const [isApplePay, setIsApplePay] = useState(false);
 
   const [cardNumberError, setCardNumberError] = useState<string | null>(null);
-  const [expirationDateError, setExpirationDateError] = useState<string | null>(null);
+  const [expirationDateError, setExpirationDateError] = useState<string | null>(
+    null,
+  );
+
   const [cvcError, setCvcError] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const cleaned = e.target.value.replace(/\D/g, '');
     const formatted = cleaned.replace(/(.{4})/g, '$1 ').trim();
     setCardNumber(formatted);
-    console.log(formatted)
   };
 
   const handleExpirationChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -45,7 +47,13 @@ export const Payment = () => {
     const month = parseInt(monthStr, 10);
     const year = parseInt(yearStr, 10);
 
-    if (isNaN(month) || isNaN(year) || month < 1 || month > 12 || yearStr.length !== 2) {
+    if (
+      isNaN(month) ||
+      isNaN(year) ||
+      month < 1 ||
+      month > 12 ||
+      yearStr.length !== 2
+    ) {
       return false;
     }
 
@@ -54,7 +62,10 @@ export const Payment = () => {
     const currentMonth = now.getMonth() + 1;
     const currentYear = now.getFullYear();
 
-    return !(fullYear < currentYear || (fullYear === currentYear && month < currentMonth));
+    return !(
+      fullYear < currentYear ||
+      (fullYear === currentYear && month < currentMonth)
+    );
   };
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -83,10 +94,6 @@ export const Payment = () => {
     }
 
     setShowPopUp(true);
-
-    if (!hasError) {
-      console.log('Форма отправлена');
-    }
   };
 
   const handleApplePayClick = () => {
@@ -177,14 +184,17 @@ export const Payment = () => {
 
       {showPopUp && (
         <PopUp
-          setShowPopup={(val) => {
+          setShowPopup={val => {
             setShowPopUp(val);
             if (!val) setIsApplePay(false);
           }}
           message={
             isApplePay
               ? t('formSuccess')
-              : cardNumberError || expirationDateError || cvcError || t('formSuccess')
+              : cardNumberError ||
+                expirationDateError ||
+                cvcError ||
+                t('formSuccess')
           }
           isError={
             isApplePay

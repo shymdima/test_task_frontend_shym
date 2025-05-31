@@ -5,7 +5,8 @@ export const Footer = () => {
     <footer className="footer">
       <p className="footer__text">
         {' '}
-        Powered by <img src="/images/icons/footer-logo.svg" alt="footer-logo" />
+        Powered by{' '}
+        <img src="./images/icons/footer-logo.svg" alt="footer-logo" />
       </p>
     </footer>
   );

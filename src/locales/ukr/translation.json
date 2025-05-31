@@ -1,22 +1,21 @@
-{   
-    "checkout": "Оформлення",
-    "freeTrial": "5 днів безкоштовно",
-    "priceNote": "потім 299.99 грн кожні 14 днів",
-    "startTrial": "Почати пробний період",
-    "payWithCard": "або сплатити карткою",
-    "cardNumber": "Номер картки",
-    "expirationDate": "Термін дії",
-    "cvc": "CVC",
-    "conditions": "Ви отримаєте <1>Plan Pro на 1 рік</1>. Після цього періоду підписка буде <3>автоматично поновлена</3> за повною ціною без знижок.",
-    "orderInfo": "Інформація про замовлення ≤ 100 символів.",
-    "descriptionNote": "Опис ≤ 400 символів.",
-    "productName": "Lamel Professional Smart Skin Compact Powder",
-    "productCategory": "Пудра для обличчя",
-    "pricePerMonth": "299.99 грн / <1>місяць</1>",
-    "formSuccess": "Платіж успішно пройшов",
-    "invalidCardNumber": "Номер карти повинен складати {{min}} цифр",
-    "invalidExpirationDate": "Вкажіть коректну дату",
-    "invalidCvc": "CVC повинен становити {{digits}} цифри",
-    "allFieldsInvalid": "Будь-ласка , коректно заповніть усі поля"
-  }
-  
+{
+  "checkout": "Оформлення",
+  "freeTrial": "5 днів безкоштовно",
+  "priceNote": "потім 299.99 грн кожні 14 днів",
+  "startTrial": "Почати пробний період",
+  "payWithCard": "або сплатити карткою",
+  "cardNumber": "Номер картки",
+  "expirationDate": "Термін дії",
+  "cvc": "CVC",
+  "conditions": "Ви отримаєте <1>Plan Pro на 1 рік</1>. Після цього періоду підписка буде <3>автоматично поновлена</3> за повною ціною без знижок.",
+  "orderInfo": "Інформація про замовлення ≤ 100 символів.",
+  "descriptionNote": "Опис ≤ 400 символів.",
+  "productName": "Lamel Professional Smart Skin Compact Powder",
+  "productCategory": "Пудра для обличчя",
+  "pricePerMonth": "299.99 грн / <1>місяць</1>",
+  "formSuccess": "Платіж успішно пройшов",
+  "invalidCardNumber": "Номер карти повинен складати {{min}} цифр",
+  "invalidExpirationDate": "Вкажіть коректну дату",
+  "invalidCvc": "CVC повинен становити {{digits}} цифри",
+  "allFieldsInvalid": "Будь-ласка , коректно заповніть усі поля"
+}

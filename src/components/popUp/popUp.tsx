@@ -1,13 +1,17 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './popUp.scss';
 
-interface PopUpProps {
+type PopUpProps = {
   setShowPopup: (value: boolean) => void;
   message: string;
   isError?: boolean;
-}
+};
 
-const PopUp: React.FC<PopUpProps> = ({ setShowPopup, message, isError = false }) => {
+const PopUp: React.FC<PopUpProps> = ({
+  setShowPopup,
+  message,
+  isError = false,
+}) => {
   const [hidden, setHidden] = useState(true);
 
   useEffect(() => {
@@ -24,11 +28,13 @@ const PopUp: React.FC<PopUpProps> = ({ setShowPopup, message, isError = false })
   }, [setShowPopup]);
 
   return (
-    <div className={`popup ${hidden ? 'popup--hidden' : ''} ${isError ? 'popup--error' : 'popup--success'}`}>
+    <div
+      className={`popup ${hidden ? 'popup--hidden' : ''} ${isError ? 'popup--error' : 'popup--success'}`}
+    >
       <div className="popup__content">
         <p>{message}</p>
         <button onClick={() => setShowPopup(false)}>
-          <img src="/images/icons/close-icon.svg" alt="close" />
+          <img src="./images/icons/close-icon.svg" alt="close" />
         </button>
       </div>
     </div>
